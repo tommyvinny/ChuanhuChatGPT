@@ -6,7 +6,7 @@ RUN apt-get update \
 COPY requirements.txt .
 COPY requirements_advanced.txt .
 RUN pip install --user --no-cache-dir -r requirements.txt
-# RUN pip install --user --no-cache-dir -r requirements_advanced.txt
+RUN pip install --user --no-cache-dir -r requirements_advanced.txt
 
 FROM python:3.9-slim-buster
 LABEL maintainer="iskoldt"
